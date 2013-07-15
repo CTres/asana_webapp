@@ -13,8 +13,6 @@ class Client < ActiveRecord::Base
       client.token = auth["credentials"]["token"]
     end
   end
-
-  def 
 end
 
 

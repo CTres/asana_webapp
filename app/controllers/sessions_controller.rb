@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   	client = Client.from_omniauth(auth)
     session[:client_id] = client.id
     session[:c_token] = auth[:credentials]['token']
+    puts session[:c_token]
     redirect_to '/workspace/index'
 	end
 

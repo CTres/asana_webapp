@@ -1,7 +1,8 @@
+require 'asana'
 class WorkspaceController < ApplicationController
-  before_filter :set_token
-
   def index
-  @workspaces = Workspace.find(:all)
+  	@token = session[:c_token]
+  	Asana::Client.authenticate(session[:c_token])
+  	@user = Asana::User.me
   end
 end

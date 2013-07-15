@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
- include ResourceHelper
-  include SessionsHelper
   protect_from_forgery
-
   helper_method :current_client
+  include ApplicationHelper
 
 private
 

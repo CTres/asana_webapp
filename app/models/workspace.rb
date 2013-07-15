@@ -1,1 +1,2 @@
 class Workspace < Resource
+end
