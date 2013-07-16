@@ -4,10 +4,8 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
 private
-
   def current_user
     @current_client ||= client.find(session[:client_id]) if session[:client_id]
-
   end
 
 end

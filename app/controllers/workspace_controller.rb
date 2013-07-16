@@ -4,5 +4,6 @@ class WorkspaceController < ApplicationController
   	@token = session[:c_token]
   	Asana::Client.authenticate(session[:c_token])
   	@user = Asana::User.me
+  	puts @user.photo
   end
 end
